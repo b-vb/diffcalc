@@ -1,0 +1,41 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+
+
+<dom-module id="difficulty-calculator-app">
+  <template>
+    <style>
+       :host {
+        display: block;
+      }
+    </style>
+    <h2>Difficulty calculator</h2>
+    <paper-input label="Enter the amount of quarter flips" auto-validate pattern="[0-9]*" error-message="numbers only!" value="{{flips}}"></paper-input>
+    <paper-input label="Enter the amount of half twists" auto-validate pattern="[0-9]*" error-message="numbers only!" value="{{twists}}"></paper-input>
+    <paper-input label="Enter the position" auto-validate pattern="[o|<|/]*" error-message="o, <, or / only!" value="{{position}}"></paper-input>
+    <paper-button raised on-click="">Show difficulty</paper-button>
+    <h3>Element: [[flips]] [[twists]] [[position]]</h3>
+  </template>
+
+
+  <script>
+    Polymer({
+
+      is: 'difficulty-calculator-app',
+
+      properties: {
+        flips: {
+          type: String
+        },
+        twists: {
+          type: String
+        },
+        position: {
+          type: String
+        },
+      },
+
+    });
+  </script>
+</dom-module>

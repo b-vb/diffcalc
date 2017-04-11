@@ -1,0 +1,7 @@
+{
+  "name": "difficulty-calculator",
+  "short_name": "difficulty-calculator",
+  "description": "Calculates the difficulty of (dmt) trampoline elements!",
+  "start_url": "/",
+  "display": "standalone"
+}
